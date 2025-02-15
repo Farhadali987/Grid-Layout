@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        #main-box{
+            display: grid;
+            grid-template-columns: 160px 500px 120px ;
+            grid-template-rows: 60px 400px 60px;
+            gap: 10px;
+            width: fit-content;
+            margin-left: auto;
+            margin: 70px auto 0px auto;
+        }
+        #main-box > div{
+            background-color: rgb(255, 208, 0);
+            padding: 20px;
+            font-weight: bold;
+        }
+        #nav{
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+        #header{
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        #article{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        #ads{
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        #footer{
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-box">
+        <div id="nav">Nav</div>
+        <div id="header">Header</div>
+        <div id="article">Article</div>
+        <div id="ads">Ads</div>
+        <div id="footer">Footer</div>
+    </div>
+</body>
+</html>
